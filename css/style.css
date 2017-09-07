@@ -47,6 +47,7 @@ body {
 }
 
 .calculator-screen {
+    background: #ddd1e7;
     box-shadow: inset 4px 5px 1px #444481;
     margin: 8px;
     padding: 10px;
@@ -55,7 +56,6 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: rgba(255, 255, 255, 0.96)
 }
 
 .calculator-screen span {
