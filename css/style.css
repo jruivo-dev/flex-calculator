@@ -4,7 +4,7 @@ body {
     padding: 0;
     margin: 0;
     background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .flex-wrapper {
@@ -12,6 +12,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+}
+
+.flex-wrapper .header {
+    font-size: 55px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 60px;
 }
 
 .calculator {
@@ -66,4 +74,18 @@ body {
     background: #9A8AD6;
     color: black;
     font-weight: bold;
+}
+
+.footer {
+    color: white;
+    margin-top: 50px;
+}
+
+.footer i {
+    font-size: 20px;
+}
+
+.footer a {
+    color:white;
+    text-decoration: none;
 }
