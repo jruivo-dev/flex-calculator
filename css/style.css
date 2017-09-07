@@ -4,6 +4,7 @@ body {
     padding: 0;
     margin: 0;
     background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
+    font-family: sans-serif;
 }
 
 .flex-wrapper {
@@ -41,6 +42,10 @@ body {
     box-shadow: 3px 3px black;
 }
 
+.calc-button:active {
+    transform: translateY(2px);
+}
+
 .calculator-screen {
     box-shadow: inset 4px 5px 1px #444481;
     margin: 5px;
@@ -60,4 +65,5 @@ body {
 .operator {
     background: #9A8AD6;
     color: black;
+    font-weight: bold;
 }
