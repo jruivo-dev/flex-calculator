@@ -1,7 +1,9 @@
+let buttons = document.querySelectorAll('div.calc-button');
 let numberButtons = document.querySelectorAll('div.number');
 let calculatorScreenEle = document.querySelector('.calculator-input');
 let operatorsEle = document.querySelectorAll('div.operator');
 let equalsEle = document.querySelector('div.equals');
+
 
 let screen = null;
 let userInput = [];
@@ -18,6 +20,7 @@ function init() {
 };
 
 function setHandlers() {
+
     numberButtons.forEach(button => {
         button.addEventListener('mouseup', numbersHandler)
     });
@@ -27,6 +30,13 @@ function setHandlers() {
     });
 
     equalsEle.addEventListener('mouseup', equalsHandler);
+
+    buttons.forEach(button => {
+        button.addEventListener('mouseup', () => {
+            let sound = new Audio('./audio/click.mp3');
+            sound.play();
+        })
+    })
 }
 
 function numbersHandler(e) {
