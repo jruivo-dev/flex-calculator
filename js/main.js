@@ -63,6 +63,7 @@ function numbersHandler(e) {
 }
 
 function operatorHandler(e) {
+    // debugger;
     operationInput = e.target.textContent;
     let result;
 
@@ -83,7 +84,10 @@ function operatorHandler(e) {
     if (screen == null || screen.length == 0)
         return;
 
-    else {
+    if (userInput == null || userInput.length == 0) {
+        stackOperation = currentOperation;
+        return;
+    } else {
         if (stack != null) {
             result = doMath(stack, screen, stackOperation);
             stack = result;
@@ -95,6 +99,7 @@ function operatorHandler(e) {
             userInput = [];
             updateScreen('');
         }
+
         if (stackOperation != null) {
             result = doMath(stack, screen, stackOperation);
             stackOperation = currentOperation;
