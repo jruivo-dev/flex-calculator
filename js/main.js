@@ -107,7 +107,6 @@ function operatorHandler(e) {
     }
 }
 
-
 function equalsHandler() {
     if (stack == null) return; // prevents 'bug' clicking equals twice
 
@@ -142,10 +141,7 @@ function updateScreen(result) {
         screen = result;
     else
         screen = userInput.join('');
-
     calculatorScreenEle.textContent = screen;
-    console.log(`Screen ${screen} | userInput ${userInput} | stack: ${stack} `);
-    console.log(`stackOperation ${stackOperation} | operationInput ${operationInput} `);
 }
 
 setHandlers();
