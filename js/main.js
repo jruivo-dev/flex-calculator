@@ -34,6 +34,7 @@ function setHandlers() {
     buttons.forEach(button => {
         button.addEventListener('mouseup', () => {
             let sound = new Audio('./audio/click.mp3');
+            sound.volume = 0.4;
             sound.play();
         })
     })
@@ -121,16 +122,16 @@ function doMath(a, b, operator) {
     b = parseFloat(b);
     switch (operator) {
         case '+':
-            return a + b;
+            return parseFloat(a + b).toFixed(3);
             break;
         case '-':
-            return a - b;
+            return parseFloat(a - b).toFixed(3);
             break;
         case '*':
-            return a * b;
+            return parseFloat(a * b).toFixed(3);
             break;
         case '/':
-            return a / b;
+            return parseFloat(a / b).toFixed(3);
             break;
     }
 }
