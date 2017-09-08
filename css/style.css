@@ -48,6 +48,8 @@ body {
     align-items: center;
     margin: 8px;
     box-shadow: 3px 3px black;
+    /*  turns text unselectable */
+    user-select: none;
 }
 
 .calc-button:active {

@@ -1,26 +1,7 @@
-// let calculator = {
-
-
-//     init() {
-//         screen: null,
-//         userInput = [];
-//         stack = null;
-//         operation: null;
-//         stackOperation: null;
-//     },
-
-//     numberToScreen(button, screen) {
-
-//     }
-// }
-
-
-
 let numberButtons = document.querySelectorAll('div.number');
 let calculatorScreenEle = document.querySelector('.calculator-input');
 let operatorsEle = document.querySelectorAll('div.operator');
 let equalsEle = document.querySelector('div.equals');
-
 
 let screen = null;
 let userInput = [];
@@ -35,7 +16,6 @@ function init() {
     operation: null;
     stackOperation: null;
 };
-
 
 function setHandlers() {
     numberButtons.forEach(button => {
@@ -139,7 +119,6 @@ function doMath(a, b, operator) {
             return a / b;
             break;
     }
-
 }
 
 function updateScreen(result) {
