@@ -5,7 +5,7 @@ body {
     margin: 0;
     background-image: linear-gradient(-20deg, #6e45e2 0%, #88d3ce 100%);
     font-family: 'Open Sans', sans-serif;
-    overflow-y: hidden; 
+    overflow-y: hidden;
 }
 
 .flex-wrapper {
