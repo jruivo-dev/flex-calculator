@@ -122,18 +122,25 @@ function doMath(a, b, operator) {
     b = parseFloat(b);
     switch (operator) {
         case '+':
-            return parseFloat(a + b).toFixed(3);
+
+            return decimalFixer(a + b);
             break;
         case '-':
-            return parseFloat(a - b).toFixed(3);
+            return decimalFixer(a - b);
             break;
         case '*':
-            return parseFloat(a * b).toFixed(3);
+            return decimalFixer(a * b);
             break;
         case '/':
-            return parseFloat(a / b).toFixed(3);
+            return decimalFixer(a / b);
             break;
     }
+}
+
+function decimalFixer(num) {
+    if (num.toString().indexOf('.') != -1)
+        return num.toFixed(2)
+    else return num;
 }
 
 function updateScreen(result) {
